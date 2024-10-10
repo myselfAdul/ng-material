@@ -1,0 +1,73 @@
+.title {
+  display: flex;
+  justify-content: center;
+}
+
+/* General content area styling */
+.content {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Cards container layout */
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-around;
+}
+
+/* Card styling */
+.example-card {
+  width: 300px; /* Set width for the cards */
+  margin-bottom: 20px; /* Space between cards */
+  display: flex;
+  justify-content: space-around;
+}
+
+/* Material icons inside the card */
+mat-icon {
+  color: #3f51b5; /* Customize icon color */
+  margin-right: 10px;
+}
+
+.icon-content{
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.button-content{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Table styling */
+table {
+  width: 100%;
+  margin-top: 20px;
+}
+
+th,
+td {
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #3f51b5;
+  color: white;
+}
+
+td {
+  border-bottom: 1px solid #ddd;
+}
+
+/* Responsive design for small screens */
+@media (max-width: 768px) {
+  .example-card {
+    width: 100%; /* Make cards full width on smaller screens */
+  }
+}

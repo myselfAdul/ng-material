@@ -1,0 +1,113 @@
+<h2 class="title" >Angular Material Components</h2>
+
+<main class="content">
+  <div class="cards-container">
+    <!-- Card 1: Icons -->
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title>Angular Material Icons</mat-card-title>
+        <mat-card-subtitle
+          >Examples of Angular Material icons</mat-card-subtitle
+        >
+      </mat-card-header>
+      <mat-card-content  class="icon-content">
+        <mat-icon>home</mat-icon>
+        <mat-icon>favorite</mat-icon>
+        <mat-icon>settings</mat-icon>
+        <mat-icon>face</mat-icon>
+      </mat-card-content>
+    </mat-card>
+
+    <!-- Card 2: Buttons -->
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title>Angular Material Buttons</mat-card-title>
+        <mat-card-subtitle>Examples of various button styles</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content class="button-content">
+        <button mat-button>Basic Button</button>
+        <button mat-raised-button color="primary">Raised Button</button>
+        <button mat-stroked-button color="accent">Stroked Button</button>
+        <button mat-flat-button color="warn">Flat Button</button>
+        <button mat-icon-button aria-label="Example icon button">
+          <mat-icon>thumb_up</mat-icon>
+        </button>
+      </mat-card-content>
+    </mat-card>
+
+    <!-- Card 3: Toggle and Checkbox -->
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title>Toggle and Checkbox</mat-card-title>
+        <mat-card-subtitle
+          >Examples of Angular Material toggle and checkbox</mat-card-subtitle
+        >
+      </mat-card-header>
+      <mat-card-content>
+        <mat-slide-toggle>Toggle me!</mat-slide-toggle>
+        <mat-checkbox>Check me!</mat-checkbox>
+      </mat-card-content>
+    </mat-card>
+
+    <!-- Card 4: Input Field and Form Field -->
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title>Input Field and Form Field</mat-card-title>
+        <mat-card-subtitle
+          >Examples of Angular Material form fields and
+          inputs</mat-card-subtitle
+        >
+      </mat-card-header>
+      <mat-card-content>
+        <mat-form-field appearance="fill">
+          <mat-label>Enter your name</mat-label>
+          <input matInput placeholder="Name" />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Select an option</mat-label>
+          <mat-select>
+            <mat-option value="1">Option 1</mat-option>
+            <mat-option value="2">Option 2</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </mat-card-content>
+    </mat-card>
+
+    <!-- Card 5: Table -->
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title>Angular Material Table</mat-card-title>
+        <mat-card-subtitle
+          >Example of Angular Material data table</mat-card-subtitle
+        >
+      </mat-card-header>
+      <mat-card-content>
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+          <ng-container matColumnDef="position">
+            <th mat-header-cell *matHeaderCellDef>Position</th>
+            <td mat-cell *matCellDef="let element">{{ element.position }}</td>
+          </ng-container>
+
+          <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef>Name</th>
+            <td mat-cell *matCellDef="let element">{{ element.name }}</td>
+          </ng-container>
+
+          <ng-container matColumnDef="weight">
+            <th mat-header-cell *matHeaderCellDef>Weight</th>
+            <td mat-cell *matCellDef="let element">{{ element.weight }}</td>
+          </ng-container>
+
+          <ng-container matColumnDef="symbol">
+            <th mat-header-cell *matHeaderCellDef>Symbol</th>
+            <td mat-cell *matCellDef="let element">{{ element.symbol }}</td>
+          </ng-container>
+
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+        </table>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</main>
